@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     Hide();
 
-//    QPushButton *but_1 = new QPushButton("E");
     QRegExp int_exp("[0-9]\\d{1}");
     QRegExp char_exp("[1-9][0-9]*.[0-9]*");
     QRegExp card_exp("[0-9]\\d{11}");
@@ -227,13 +226,11 @@ void MainWindow::BuyWhole(){
 
 void MainWindow::OpenSecondWindow(){
     Secondwindow window;
-//    window.setModal(true);
     window.exec();
 }
 
 void MainWindow::OpenThirdWindow(){
     Thirdwindow window;
-//    window.setModal(true);
     window.exec();
 }
 
@@ -278,10 +275,6 @@ void MainWindow::Hide(){
     ui->pushButton_10->hide();
     ui->pushButton_11->hide();
     ui->pushButton_12->hide();
-//    ui->pushButton_13->hide();
-//    ui->pushButton_14->hide();
-//    this->resize(this->sizeHint());
     this->resize(480,180);
     this->setFixedSize(QSize(480, 180));
-//   adjustSize();
 }

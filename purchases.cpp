@@ -125,12 +125,6 @@ void Purchase::setPrice(const double &_value) {
         price = _value;
 }
 
-//void Purchase::setTime(const Time &_value) {
-//    time.hours = _value.hours;
-//    time.minutes = _value.minutes;
-//    time.seconds = _value.seconds;
-//}
-
 void Purchase::setTime(const int& _hours, const int& _minutes, const int& _seconds){
     if (_hours >= MIN_TIME_VALUE && _hours < MAX_HOURS_VALUE) {
         this->time.hours = _hours;
@@ -142,48 +136,3 @@ void Purchase::setTime(const int& _hours, const int& _minutes, const int& _secon
         this->time.seconds = _seconds;
     }
 }
-
-
-//int main() {
-////    Test::run();
-////    Test::run2();
-////    Queue b;
-////    b.push(Purchase());
-////    Queue a;
-////    a.push(Purchase(0,{0,0,1}));
-////    std::cout << b.Compare(a) << std::endl;
-////    ReadFromFile("queue", b);
-////    std::cout  << b.Calculate({15,55,1},{16,26,6});
-////    cout << a.getSize();
-////    Purchase b{2.25, {12,20,20}};
-////    Purchase c{4.21, {1,1,1}};
-////    Purchase d{3.01, {15,25,22}};
-////    Purchase e{4.78, {16,26,6}};
-////    Purchase f{5.55, {7,7,7}};
-////    a.push(b);
-////    cout << a.getSize();
-////    a.push(c);
-////    a.push(c);
-////    a.push(d);
-////    a.push(d);
-////    a.push(e);
-////    a.pop();
-////    Queue q(f);
-////    q.pop();
-////    q.pop();
-////    std::cout << q.empty() << std::endl;
-////    Queue::Iterator aa(a);
-////    ++aa;
-////    ++aa;
-////    std::cout << (*aa).getPrice() << std::endl;
-////    Queue::Iterator bb(a);
-////    std::cout << (*bb).getPrice() << std::endl;
-////    std::cout << (bb==aa) << std::endl;
-////    bb=aa;
-////    std::cout << (bb!=aa) << std::endl;
-////    PrintQueue(a);
-////    Queue a2(a);
-////    a2.push(e);
-////    a2.WriteToFile();
-//    return 0;
-//}

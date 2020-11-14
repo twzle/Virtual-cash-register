@@ -91,10 +91,8 @@ void Secondwindow::AddToCheck(){
         s >> name;
         float price;
         s >> price;
-//        std::cout << price;
-        amount = amount +price;
+        amount +=price;
         amount=round(amount*1000)/1000;
-//        ui->label_amount->setText(QString::number(amount,'f',3));
         ui->label_amount->setNum(amount);
         ui->listWidget_check->addItem(ui->listWidget_prod->currentItem()->text());
     }
@@ -108,8 +106,7 @@ void Secondwindow::AddToCheck2(){
         s >> name;
         float price;
         s >> price;
-//        std::cout << price;
-        amount = amount +price;
+        amount +=price;
         amount=round(amount*1000)/1000;
         ui->label_amount->setNum(amount);
         ui->listWidget_check->addItem(ui->listWidget_prod_2->currentItem()->text());
@@ -124,10 +121,8 @@ void Secondwindow::DeleteFromCheck(){
         s >> name;
         float price;
         s >> price;
-//        std::cout << price;
-        amount = amount -price;
+        amount -=price;
         amount=round(amount*1000)/1000;
-//        ui->label_amount->setText(QString::number(amount,'f',3));
         ui->label_amount->setNum(amount);
         qDeleteAll(ui->listWidget_check->selectedItems());
     }
